@@ -3,8 +3,19 @@
     src: local('Kreon Regular'), local('Kreon-Regular'), url('../fonts/Kreon-Regular.ttf') format('truetype'), url('../fonts/Kreon-Regular.woff') format('woff');
 }
 
+@font-face {
+    font-family: 'Apercu';
+    src: local('Apercu Regular.otf'), local('Apercu_Regular.otf'), url('../fonts/Apercu_Regular.otf') format('opentype')
+}
+
+
+@font-face {
+    font-family: 'Apercu-Bold';
+    src: local('Apercu Regular Bold.otf'), local('Apercu_Bold.otf'), url('../fonts/Apercu_Bold.otf') format('opentype')
+}
+
 h1, h2, h3, h4 {
-       font-family: 'Kreon';
+       font-family: 'arial';
 }
 
 .navbar-fds {
@@ -31,12 +42,11 @@ h1, h2, h3, h4 {
 }
 
 .navbar-fds .navbar-brand {
-  font-size: 34px;
-  color: #06C;
-  font-family: 'Kreon', arial, serif;
+  color: #112233;
+  font-family: 'Apercu', arial, serif;
   background-image: url('../img/logo.png');
   background-repeat: no-repeat;
-  padding: 18px 15px 12px 60px;
+  padding: 20px 15px 12px 60px;
   background-position: 15px 16px;
 }
 
