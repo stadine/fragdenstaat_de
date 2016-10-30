@@ -6,22 +6,27 @@
 {% block title %}FragDenStaat - Portal für Informationsfreiheit und Transparenz{% endblock %}
 
 {% block site_description %}
-  <p>
-    Jede Person hat das Recht auf Informationen. Frag-Den-Staat hilft, dieses Recht wahrzunehmen. 
-    <br> 
-    Fragen Sie über diese Plattform Behörden in Deutschland nach Informationen und Dokumenten!
+ <p>
+    Mit FragDenStaat kannst du ganz einfach Informationen und Dokumente an deutschen Behörden anfragen.
   </p>
 {% endblock %}
 
 
+
+
 {% block first_index_row %}
-<div class="col-lg-7 col-md-7">
+<div class="col-lg-6 col-md-6">
   {% block first_index_row_search %}
     {{ block.super }}
      <div class="special-nav-item {% block nav_makerequest %}{% endblock %}">
             <a href="{% url 'foirequest-make_request' %}">
               <span>{% blocktrans %}Make a Request!{% endblocktrans %}</span>
             </a>
+          </div>
+     <div>
+        <a href="{% url 'foirequest-make_request' %}">
+          <span>Watch the explanation</span>
+        </a>
           </div>
   {% endblock %}
 </div>
@@ -33,21 +38,24 @@
 
 
 {% block index_content_row %}
+{% block index_search%}
 
 <div class="row-fluid">
   <div class="col-lg-12 well">
-    <h2 class="text-center">Noch keine Idee? Suchen Sie erstmal in </h2>
-    {% block example_search_terms_block %}{% endblock %}
-{% block index-search-placeholder %}z.B. Schule oder NSA{% endblock %}
-
+    <div class="test">
+      <h2 class="text-center">Noch keine Idee? <br>Suche erstmal in {{ foicount }} Anfragen und {{ pbcount }} Behörden.</h2>
+        {% block example_search_terms_block %}{% endblock %}
+        {% block index-search-placeholder %}z.B. Schule oder NSA{% endblock %}
+    </div>
   </div>
-  </div>
+</div>
+{% endblock %}
 
 
 
 <div class="row-fluid">
   <div class="col-lg-12 well">
-    <h2 class="text-center">Wie funktioniert Frag-Den-Staat?</h2>
+    <h2 class="text-center">Wie funktioniert FragDenStaat?</h2>
     <div class="row steps">
 
       <a class="step col-md-4" href="{% url 'foirequest-make_request' %}">
